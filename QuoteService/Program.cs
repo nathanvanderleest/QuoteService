@@ -5,7 +5,7 @@ using System.ServiceProcess;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuoteService
+namespace WinServices
 {
     static class Program
     {
@@ -14,12 +14,7 @@ namespace QuoteService
         /// </summary>
         static void Main()
         {
-            ServiceBase[] ServicesToRun;
-            ServicesToRun = new ServiceBase[]
-            {
-                new Service1()
-            };
-            ServiceBase.Run(ServicesToRun);
+            ServiceBase.Run(new QuoteService());
         }
     }
 }

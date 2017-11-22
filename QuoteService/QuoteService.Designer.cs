@@ -1,6 +1,6 @@
-﻿namespace QuoteService
+﻿namespace WinServices
 {
-    partial class Service1
+    partial class QuoteService
     {
         /// <summary> 
         /// Required designer variable.
