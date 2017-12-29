@@ -29,26 +29,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            //components = new System.ComponentModel.Container();
-            ServiceProcessInstaller1 = new System.ServiceProcess.ServiceProcessInstaller();
-            ServiceInstaller1 = new System.ServiceProcess.ServiceInstaller();
-
-            //
-            // serviceProcessInstaller1
-            //
+            this.ServiceProcessInstaller1 = new System.ServiceProcess.ServiceProcessInstaller();
+            this.ServiceInstaller1 = new System.ServiceProcess.ServiceInstaller();
+            // 
+            // ServiceProcessInstaller1
+            // 
+            this.ServiceProcessInstaller1.Account = System.ServiceProcess.ServiceAccount.LocalService;
             this.ServiceProcessInstaller1.Password = null;
             this.ServiceProcessInstaller1.Username = null;
-            
-            //
-            // serviceInstaller1
-            //
-            this.ServiceInstaller1.ServiceName = "QuoteService";
+            // 
+            // ServiceInstaller1
+            // 
             this.ServiceInstaller1.DisplayName = "QuoteService";
-
-            //
+            this.ServiceInstaller1.ServiceName = "QuoteService";
+            // 
             // ProjectInstaller
-            //
-            this.Installers.AddRange(new System.Configuration.Install.Installer[] { this.ServiceProcessInstaller1, this.ServiceInstaller1});
+            // 
+            this.Installers.AddRange(new System.Configuration.Install.Installer[] {
+            this.ServiceProcessInstaller1,
+            this.ServiceInstaller1});
+
         }
 
         #endregion
